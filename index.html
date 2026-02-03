@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NV-19-ZETA | DRA. ELARA VANCE</title>
+    <link rel="stylesheet" href="estilo-elara.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Fallback básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0f1e; color: #e6f1ff; font-family: 'Crimson Text', serif; }
+    </style>
+</head>
+<body>
+    <!-- Protocolo de Inicialização -->
+    <div class="protocolo-inicio" id="protocolo">
+        <div class="sequencia-inicial">
+            <div class="linha-codigo" data-delay="0">
+                <span class="prefixo">>>> </span>
+                <span class="codigo">INICIANDO PROTOCOLO DE ACESSO BIOÉTICO</span>
+            </div>
+            <div class="linha-codigo" data-delay="800">
+                <span class="prefixo">>>> </span>
+                <span class="codigo">CARREGANDO PERFIL NV-19-ZETA</span>
+            </div>
+            <div class="linha-codigo" data-delay="1600">
+                <span class="prefixo">>>> </span>
+                <span class="codigo">ANÁLISE NEUROQUÍMICA: OXITOCINA 0.3% | NORADRENALINA 89.7%</span>
+            </div>
+            <div class="linha-codigo" data-delay="2400">
+                <span class="prefixo">>>> </span>
+                <span class="codigo">PERFIL PSICOAFETIVO: DESCALIBRADO</span>
+            </div>
+            <div class="linha-codigo" data-delay="3200">
+                <span class="prefixo">>>> </span>
+                <span class="codigo">ACESSO CONCEDIDO POR NECESSIDADE ÉTICA</span>
+            </div>
+            <div class="cursor-protocolo">█</div>
+        </div>
+    </div>
+
+    <!-- Interface Principal -->
+    <main class="interface-cientifica" id="interface" style="display: none;">
+        <!-- Cabeçalho de Identificação -->
+        <header class="cabecalho-neurocientifico">
+            <div class="identificacao-perfil">
+                <div class="codigo-status">
+                    <span class="codigo">NV-19-ZETA</span>
+                    <div class="status-container">
+                        <span class="status inativa">INATIVA</span>
+                        <span class="status recalibracao">SETOR DE RECALIBRAÇÃO</span>
+                    </div>
+                </div>
+                
+                <div class="marcador-etica">
+                    <span class="icone-etica">⚖️</span>
+                    <span>BIOÉTICA OPERACIONAL COMPROMETIDA</span>
+                </div>
+            </div>
+            
+            <div class="titulo-perfil">
+                <h1 class="nome-cientifico">DRA. ELARA VANCE</h1>
+                <div class="subtitulo-duplo">
+                    <span class="funcao-oficial">Neurocientista Sênior</span>
+                    <span class="separador">/</span>
+                    <span class="funcao-operacional">Coordenadora de Bioética Operacional</span>
+                </div>
+            </div>
+            
+            <div class="metricas-neuroquimicas">
+                <div class="metrica-cientifica">
+                    <div class="rotulo-metrica">
+                        <span>VULNERABILIDADE EMOCIONAL</span>
+                        <span class="valor" id="valor-vulnerabilidade">0.3%</span>
+                    </div>
+                    <div class="barra-cientifica">
+                        <div class="preenchimento" data-alvo="0.3"></div>
+                    </div>
+                </div>
+                <div class="metrica-cientifica">
+                    <div class="rotulo-metrica">
+                        <span>RIGIDEZ COGNITIVA</span>
+                        <span class="valor" id="valor-rigidez">94.7%</span>
+                    </div>
+                    <div class="barra-cientifica">
+                        <div class="preenchimento" data-alvo="94.7"></div>
+                    </div>
+                </div>
+                <div class="metrica-cientifica">
+                    <div class="rotulo-metrica">
+                        <span>FALHA ÉTICA DETECTADA</span>
+                        <span class="valor" id="valor-falha">78.2%</span>
+                    </div>
+                    <div class="barra-cientifica">
+                        <div class="preenchimento" data-alvo="78.2"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navegação Científica -->
+        <nav class="navegacao-neuro">
+            <button class="botao-neuro ativo" data-modulo="perfil">
+                <span class="numero">01</span>
+                <span class="titulo">PERFIL PSICOAFETIVO</span>
+                <span class="desc">Anomalia Bioquímica</span>
+            </button>
+            <button class="botao-neuro" data-modulo="formacao">
+                <span class="numero">02</span>
+                <span class="titulo">FORMAÇÃO ÉTICA</span>
+                <span class="desc">Frieza como Compaixão</span>
+            </button>
+            <button class="botao-neuro" data-modulo="ruptura">
+                <span class="numero">03</span>
+                <span class="titulo">ARCO DE TRANSFORMAÇÃO</span>
+                <span class="desc">Falha Microscópica</span>
+            </button>
+            <button class="botao-neuro" data-modulo="recalibracao">
+                <span class="numero">04</span>
+                <span class="titulo">RECALIBRAÇÃO</span>
+                <span class="desc">93 Segundos de Nada</span>
+            </button>
+            <button class="botao-neuro" data-modulo="simbolismo">
+                <span class="numero">05</span>
+                <span class="titulo">FUNÇÃO SIMBÓLICA</span>
+                <span class="desc">Ética Instrumentalizada</span>
+            </button>
+        </nav>
+
+        <!-- Área de Conteúdo -->
+        <div class="container-laboratorio">
+            <!-- Painel Principal -->
+            <div class="painel-principal">
+                <!-- Módulo 1: Perfil Psicoafetivo -->
+                <section class="modulo-cientifico ativo" id="modulo-perfil">
+                    <div class="cabecalho-modulo">
+                        <h2>PERFIL PSICOAFETIVO</h2>
+                        <div class="marcador-anomalia">
+                            <span>ANOMALIA BIOQUÍMICA DETECTADA</span>
+                        </div>
+                    </div>
+                    
+                    <div class="conteudo-cientifico">
+                        <div class="citacao-destaque">
+                            <div class="aspas-citacao">"</div>
+                            <p class="texto-citacao">Elara Vance via o amor como uma anomalia bioquímica, uma cascata hormonal que sequestrava a racionalidade e comprometia a autonomia do indivíduo.</p>
+                            <div class="aspas-citacao">"</div>
+                        </div>
+                        
+                        <div class="texto-descritivo">
+                            <p>Formada em neurofisiologia e ética algorítmica, construiu sua carreira sobre a crença de que <strong>a frieza era a mais alta forma de compaixão</strong>: ao neutralizar o afeto, evitava-se o sofrimento.</p>
+                            
+                            <p>Seu laboratório era um santuário de precisão, onde até o silêncio era medido em decibéis.</p>
+                            
+                            <div class="elemento-interativo">
+                                <button class="botao-revelar" data-alvo="protocolo-amor">
+                                    <span class="icone-revelar">🔬</span>
+                                    <span>ANALISAR PROTOCOLO DE AMOR</span>
+                                </button>
+                                <div class="conteudo-revelado" id="protocolo-amor">
+                                    <div class="cabecalho-revelado">
+                                        <h4>PROTOCOLO DE ANÁLISE AFETIVA</h4>
+                                        <span class="codigo-revelado">PA-19-ZETA</span>
+                                    </div>
+                                    <div class="corpo-revelado">
+                                        <div class="item-analise">
+                                            <span class="variavel">OXITOCINA:</span>
+                                            <span class="valor-analise">AGENTE DE VULNERABILIDADE</span>
+                                        </div>
+                                        <div class="item-analise">
+                                            <span class="variavel">DOPAMINA:</span>
+                                            <span class="valor-analise">SISTEMA DE RECOMPENSA DEFEITUOSO</span>
+                                        </div>
+                                        <div class="item-analise">
+                                            <span class="variavel">CONCLUSÃO:</span>
+                                            <span class="valor-analise anomalia">AMOR = CASCATA DE FALHAS NEURAIS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Módulo 2: Formação Ética -->
+                <section class="modulo-cientifico" id="modulo-formacao">
+                    <div class="cabecalho-modulo">
+                        <h2>FORMAÇÃO ÉTICA</h2>
+                        <div class="marcador-tempora">ANO 17</div>
+                    </div>
+                    
+                    <div class="conteudo-cientifico">
+                        <div class="linha-biografica">
+                            <div class="ponto-biografico">
+                                <div class="ano-biografico">INFÂNCIA</div>
+                                <div class="evento-biografico">
+                                    <h4>FILHA DE DIPLOMATA E CIRURGIÃ</h4>
+                                    <p>Cresceu em ambientes onde emoções eram negociadas como moeda de fraqueza.</p>
+                                </div>
+                            </div>
+                            <div class="ponto-biografico destaque">
+                                <div class="ano-biografico">17 ANOS</div>
+                                <div class="evento-biografico">
+                                    <h4>QUEDA DO PAI</h4>
+                                    <p>Testemunhou a queda após escândalo amoroso, não por traição, mas por confiança mal colocada.</p>
+                                    <div class="nota-marginal">
+                                        <em>"Desde então, jurou que jamais permitiria que o coração interferisse na lógica."</em>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ponto-biografico">
+                                <div class="ano-biografico">INSTITUTO LETHE</div>
+                                <div class="evento-biografico">
+                                    <h4>DESMONTE DO AMOR</h4>
+                                    <p>Tornou-se conhecida por desmontar o amor em neurotransmissores, como quem desmonta uma arma.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="citacao-destaque">
+                            <p class="texto-citacao">Para ela, oxitocina não era hormônio do vínculo, mas agente de vulnerabilidade.</p>
+                        </div>
+                        
+                        <div class="elemento-interativo">
+                            <div class="simulador-etico">
+                                <h4>DILEMA ÉTICO OPERACIONAL</h4>
+                                <p class="cenario"><strong>Cenário:</strong> Paciente demonstra apego emocional excessivo. Protocolo AI-17 disponível.</p>
+                                
+                                <div class="opcoes-eticas">
+                                    <button class="opcao-etica" data-opcao="aplicar">
+                                        <span class="icone-opcao">💉</span>
+                                        <span class="texto-opcao">APLICAR AI-17</span>
+                                        <span class="justificativa">Neutralizar vulnerabilidade</span>
+                                    </button>
+                                    <button class="opcao-etica ativa" data-opcao="preservar">
+                                        <span class="icone-opcao">🧠</span>
+                                        <span class="texto-opcao">PRESERVAR AFETO</span>
+                                        <span class="justificativa">Manter integridade neural</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="resultado-etica" id="resultado-etica">
+                                    <p>Elara aplicaria o AI-17. A frieza como forma mais elevada de compaixão.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Módulo 3: Arco de Transformação -->
+                <section class="modulo-cientifico" id="modulo-ruptura">
+                    <div class="cabecalho-modulo">
+                        <h2>ARCO DE TRANSFORMAÇÃO</h2>
+                        <div class="indicador-falha">
+                            <span>FALHA ÉTICA: 78.2%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="conteudo-cientifico">
+                        <div class="citacao-destaque">
+                            <div class="aspas-citacao">"</div>
+                            <p class="texto-citacao">De arquiteta do controle → a testemunha silenciosa da própria falha ética.</p>
+                            <div class="aspas-citacao">"</div>
+                        </div>
+                        
+                        <div class="processo-ruptura">
+                            <div class="estagio-ruptura">
+                                <div class="numero-estagio">01</div>
+                                <div class="conteudo-estagio">
+                                    <h4>CONTRAPONTO DE RAEL</h4>
+                                    <p>"E felizes?" Uma pergunta sem resposta em camadas de protocolos.</p>
+                                </div>
+                            </div>
+                            <div class="seta-ruptura">↓</div>
+                            <div class="estagio-ruptura">
+                                <div class="numero-estagio">02</div>
+                                <div class="conteudo-estagio">
+                                    <h4>DESCOBERTA DOS ARQUIVOS</h4>
+                                    <p>Eleus e Thalía. A fuga onírica. A prova de que o sistema falhava.</p>
+                                </div>
+                            </div>
+                            <div class="seta-ruptura">↓</div>
+                            <div class="estagio-ruptura destaque">
+                                <div class="numero-estagio">03</div>
+                                <div class="conteudo-estagio">
+                                    <h4>ATO RADICAL</h4>
+                                    <p>Apagou seu próprio perfil psicoafetivo. Criou um vazio deliberado.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="texto-descritivo">
+                            <p>Foi fornecida para o Setor de Recalibração Cognitiva, <strong>não como proteção, mas como autossabotagem silenciosa</strong>.</p>
+                            
+                            <div class="citacao-marginal">
+                                <div class="marcador-marginal">!</div>
+                                <div class="texto-marginal">
+                                    "Talvez o erro não estivesse neles, mas em nós."
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="elemento-interativo">
+                            <button class="botao-temporal" id="botao-vazio">
+                                <span class="icone-temporal">⏳</span>
+                                <span>SIMULAR O VAZIO DELIBERADO</span>
+                            </button>
+                            <div class="descricao-temporal">
+                                <small>Duração: 93 segundos (tempo do efeito AI-17)</small>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Módulo 4: Recalibração -->
+                <section class="modulo-cientifico" id="modulo-recalibracao">
+                    <div class="cabecalho-modulo">
+                        <h2>RECALIBRAÇÃO COGNITIVA</h2>
+                        <div class="marcador-temporal">93''</div>
+                    </div>
+                    
+                    <div class="conteudo-cientifico">
+                        <div class="container-recalibracao">
+                            <div class="dados-recalibracao">
+                                <div class="item-dado">
+                                    <span class="rotulo-dado">SETOR:</span>
+                                    <span class="valor-dado">Recalibração Cognitiva</span>
+                                </div>
+                                <div class="item-dado">
+                                    <span class="rotulo-dado">STATUS:</span>
+                                    <span class="valor-dado">Monitoramento Contínuo</span>
+                                </div>
+                                <div class="item-dado">
+                                    <span class="rotulo-dado">ANOMALIA:</span>
+                                    <span class="valor-dado anomalia">Implante Desativado Diariamente</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bloco-observacao">
+                                <h4>REGISTRO DE OBSERVAÇÃO #782</h4>
+                                <p>"Todas as noites, ela desativa seu implante por exatos <strong>93 segundos</strong>, o tempo exato do efeito do neuropeptídeo AI-17."</p>
+                                <p>"Ninguém sabe o que sente nesse intervalo. Talvez, pela primeira vez, <strong>nada</strong>, e nesse nada, <strong>tudo</strong>."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="citacao-destaque emocional">
+                            <p class="texto-citacao">"O café frio que bebeu naquela noite tinha o gosto da infância que jurara esquecer."</p>
+                        </div>
+                        
+                        <div class="elemento-interativo">
+                            <div class="contador-temporal">
+                                <div class="display-contador">
+                                    <span class="rotulo-contador">TEMPO DE IMPLANTE DESATIVADO:</span>
+                                    <span class="valor-contador" id="contador-93">00:00</span>
+                                </div>
+                                <button class="botao-contador" id="iniciar-contador">
+                                    <span>INICIAR CONTAGEM DOS 93''</span>
+                                </button>
+                                <div class="nota-contador">
+                                    <small>Intervalo diário de vulnerabilidade permitida</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Módulo 5: Simbolismo -->
+                <section class="modulo-cientifico" id="modulo-simbolismo">
+                    <div class="cabecalho-modulo">
+                        <h2>FUNÇÃO SIMBÓLICA</h2>
+                        <div class="marcador-arquetipo">ARQUÉTIPO: ÉTICA INSTRUMENTALIZADA</div>
+                    </div>
+                    
+                    <div class="conteudo-cientifico">
+                        <div class="citacao-destaque">
+                            <p class="texto-citacao">Representa a ética instrumentalizada, a crença de que o bem-estar coletivo justifica a supressão do individual.</p>
+                        </div>
+                        
+                        <div class="analise-simbolica">
+                            <div class="item-simbolico">
+                                <div class="icone-simbolico">⚕️</div>
+                                <div class="conteudo-simbolico">
+                                    <h4>MEDO DA HUMANIDADE</h4>
+                                    <p>Se Eleus encarna o medo do caos e Thalía o medo do desaparecimento, Vance é o <strong>medo da própria humanidade disfarçado de ciência</strong>.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item-simbolico destaque">
+                                <div class="icone-simbolico">☕</div>
+                                <div class="conteudo-simbolico">
+                                    <h4>XÍCARA DE REYKJAVIK</h4>
+                                    <p>Único objeto pessoal em seu gabinete. Simboliza a <strong>nostalgia da integridade perdida</strong>: um tempo em que a neuroética servia à cura, não ao controle.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item-simbolico">
+                                <div class="icone-simbolico">⚖️</div>
+                                <div class="conteudo-simbolico">
+                                    <h4>FRONTEIRA ÉTICA</h4>
+                                    <p>A linha tênue entre proteger pessoas de sua própria vulnerabilidade e roubar delas o que as torna humanas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bloco-reflexao">
+                            <h4>REFLEXÃO FINAL</h4>
+                            <p>Elara Vance representa o perigo da racionalidade sem empatia, da ciência sem humanidade, da ética sem coração. Sua jornada não é de redenção, mas de <strong>reconhecimento</strong> – reconhecimento de que o maior erro pode ser a certeza de que não se está errando.</p>
+                            
+                            <div class="citacao-final">
+                                <div class="marcador-final">"</div>
+                                <div class="texto-final">
+                                    E se o erro não for o amor… mas a certeza de que ele deve ser corrigido?
+                                    <span class="assinatura-final">— Anotação marginal não oficial</span>
+                                </div>
+                                <div class="marcador-final">"</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Painel Lateral: Diálogo Ético -->
+            <aside class="painel-dialogo">
+                <div class="cabecalho-dialogo">
+                    <div class="titulo-dialogo">
+                        <h3>DIÁLOGO NEUROÉTICO</h3>
+                        <div class="status-conexao">
+                            <span class="ponto-status"></span>
+                            <span>CONEXÃO RESIDUAL</span>
+                        </div>
+                    </div>
+                    <div class="marcador-privacidade">
+                        <span class="icone-privacidade">🔇</span>
+                        <span>IMPLANTE DESATIVADO</span>
+                    </div>
+                </div>
+                
+                <div class="area-mensagens" id="area-mensagens">
+                    <div class="mensagem sistema">
+                        <div class="cabecalho-mensagem">SISTEMA NEUROÉTICO</div>
+                        <div class="corpo-mensagem">Conexão estabelecida com registros residuais da Dra. Vance. As respostas são reconstruções baseadas em padrões cognitivos e anotações marginais.</div>
+                    </div>
+                    
+                    <div class="mensagem vance">
+                        <div class="cabecalho-mensagem">DRA. ELARA VANCE</div>
+                        <div class="corpo-mensagem">Você acessou meus registros. Não espere arrependimento. Espere... dados incompletos.</div>
+                    </div>
+                </div>
+                
+                <div class="sugestoes-questoes">
+                    <div class="titulo-sugestoes">QUESTÕES ÉTICAS:</div>
+                    <button class="botao-questao" data-questao="O amor é realmente uma anomalia?">
+                        <span class="icone-questao">❓</span>
+                        <span class="texto-questao">O amor é realmente uma anomalia?</span>
+                    </button>
+                    <button class="botao-questao" data-questao="Por que apagou seu próprio perfil?">
+                        <span class="icone-questao">🗑️</span>
+                        <span class="texto-questao">Por que apagou seu próprio perfil?</span>
+                    </button>
+                    <button class="botao-questao" data-questao="O que sente nos 93 segundos?">
+                        <span class="icone-questao">⏱️</span>
+                        <span class="texto-questao">O que sente nos 93 segundos?</span>
+                    </button>
+                    <button class="botao-questao" data-questao="A ciência pode ser compassiva?">
+                        <span class="icone-questao">⚖️</span>
+                        <span class="texto-questao">A ciência pode ser compassiva?</span>
+                    </button>
+                </div>
+                
+                <div class="entrada-dialogo">
+                    <textarea 
+                        id="entrada-questao" 
+                        placeholder="Formule sua questão ética..."
+                        rows="2"
+                        maxlength="200"></textarea>
+                    <button id="botao-enviar">
+                        <span class="icone-enviar">↗</span>
+                        <span>ENVIAR ANÁLISE</span>
+                    </button>
+                </div>
+                
+                <div class="nota-etico">
+                    <span class="icone-nota">⚠️</span>
+                    <span class="texto-nota">Este diálogo ocorre durante o intervalo de 93 segundos</span>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Rodapé Científico -->
+        <footer class="rodape-cientifico">
+            <div class="assinatura-instituto">
+                <span class="nome-instituto">PROTOCOLO EROS • INSTITUTO LETHE</span>
+                <span class="versao-etica">VERSÃO NEUROÉTICA 3.7</span>
+            </div>
+            <div class="marcador-xicara">
+                <span class="texto-xicara">XÍCARA DE REYKJAVIK • INTEGRIDADE PERDIDA</span>
+                <span class="icone-xicara">☕</span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Elementos de Áudio -->
+    <audio id="audio-lab" preload="metadata">
+        <!-- Som de laboratório -->
+    </audio>
+    
+    <audio id="audio-digitacao" preload="metadata">
+        <!-- Som de digitacao -->
+    </audio>
+
+    <script src="script-elara.js"></script>
+    
+    <!-- Fallback -->
+    <script>
+        setTimeout(() => {
+            if (!window.sistemaElaraCarregado) {
+                document.getElementById('protocolo').innerHTML = `
+                    <div style="padding: 3rem; color: #64b5f6; font-family: 'JetBrains Mono', monospace; text-align: center;">
+                        <div style="font-size: 1.5rem; margin-bottom: 1rem;">PROTOCOLO DE FALLBACK ATIVADO</div>
+                        <div style="margin-bottom: 2rem;">>>> PERFIL NV-19-ZETA DISPONÍVEL</div>
+                        <button onclick="document.getElementById('protocolo').style.display='none';document.getElementById('interface').style.display='block';" 
+                                style="background: #64b5f6; color: #0a0f1e; border: none; padding: 1rem 2rem; font-family: 'JetBrains Mono'; cursor: pointer; font-weight: bold;">
+                            [INICIAR ANÁLISE NEUROÉTICA]
+                        </button>
+                    </div>
+                `;
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
